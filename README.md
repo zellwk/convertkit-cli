@@ -4,6 +4,7 @@ This is a unofficial CLI for [Convertkit](https://convertkit.com?lmref=yfs9CA).
 
 - [Convertkit CLI](#convertkit-cli)
   - [Installation](#installation)
+  - [Login](#login)
   - [Get subscriber](#get-subscriber)
   - [Get Tags](#get-tags)
   - [Add tag to a subscriber](#add-tag-to-a-subscriber)
@@ -15,6 +16,16 @@ Install this this cli with `npm install convertkit-cli -g`
 
 ```bash
 npm install convertkit-cli -g
+```
+
+## Login
+
+You must provide your API secret for this CLI to work. The API secret is kept safe in your computer, so don't worry :)
+
+You can find your API secret in the [Accounts Settings](https://app.convertkit.com/account/edit) page.
+
+```bash
+ck login <API_SECRET>
 ```
 
 ## Get subscriber
@@ -32,7 +43,7 @@ ck subscriber <subscriberEmail>
 ```
 
 <figure role="figure">
-  <img src="/images/2020/" alt="">
+  <img src="images/subscriber.gif" alt="Gets a subscriber.">
 </figure>
 
 ## Get Tags
@@ -44,7 +55,7 @@ ck tags
 ```
 
 <figure role="figure">
-  <img src="/images/2020/" alt="">
+  <img src="images/tags.gif" alt="Gets list of tags.">
 </figure>
 
 ## Add tag to a subscriber
@@ -56,10 +67,8 @@ ck addtag <tag> <subscriberEmail>
 ```
 
 <figure role="figure">
-  <img src="/images/2020/" alt="">
+  <img src="images/addtag.gif" alt="Adds tag to subscriber">
 </figure>
-
-Note: I prepended `\#` because my tags begin with `#`. `#` is a special character that needs to be escaped. If your tags do not begin with `#`, you don't need to write `\#`.
 
 ## Remove tag from a subscriber
 
@@ -70,7 +79,5 @@ ck removetag <tag> <subscriberEmail>
 ```
 
 <figure role="figure">
-  <img src="/images/2020/" alt="">
+  <img src="images/removetag.gif" alt="Removes tag from a subscriber">
 </figure>
-
-Note: I prepended `\#` because my tags begin with `#`. `#` is a special character that needs to be escaped. If your tags do not begin with `#`, you don't need to write `\#`.
