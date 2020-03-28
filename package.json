@@ -5,6 +5,10 @@
   "bin": {
     "ck": "bin/index.js"
   },
+  "files": [
+    "src",
+    "bin"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zellwk/convertkit-cli.git"
