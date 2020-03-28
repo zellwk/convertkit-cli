@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "release": "np"
+    "release": "np --no-publish && npm publish"
   },
   "bin": {
     "ck": "bin/index.js"
