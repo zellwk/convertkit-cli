@@ -37,7 +37,7 @@ This is why I created a command line interface for [Convertkit](https://convertk
 You can install the CLI with `npm`:
 
 ```bash
-npm install convertkit-cli --g
+npm install convertkit-cli -g
 ```
 
 This lets you use the `ck` command.
