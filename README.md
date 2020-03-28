@@ -2,7 +2,7 @@
 
 This is a unofficial CLI for [Convertkit](https://convertkit.com?lmref=yfs9CA).
 
-Note: Links to Convertkit in this repository are affiliate links.
+Note: Links to Convertkit in this repository are affiliate links. Feel free to use them if you want to support me a little! :)
 
 - [A Simple CLI for Convertkit](#a-simple-cli-for-convertkit)
   - [The Convertkit CLI](#the-convertkit-cli)
