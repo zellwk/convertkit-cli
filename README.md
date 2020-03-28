@@ -1,83 +1,118 @@
-# Convertkit CLI
+# A Simple CLI for Convertkit
 
 This is a unofficial CLI for [Convertkit](https://convertkit.com?lmref=yfs9CA).
 
-- [Convertkit CLI](#convertkit-cli)
-  - [Installation](#installation)
-  - [Login](#login)
-  - [Get subscriber](#get-subscriber)
-  - [Get Tags](#get-tags)
-  - [Add tag to a subscriber](#add-tag-to-a-subscriber)
-  - [Remove tag from a subscriber](#remove-tag-from-a-subscriber)
+- [A Simple CLI for Convertkit](#a-simple-cli-for-convertkit)
+  - [The Convertkit CLI](#the-convertkit-cli)
+- [Why use this?](#why-use-this)
+  - [Installing the CLI](#installing-the-cli)
+    - [Logging in](#logging-in)
+  - [Getting information about a subscriber](#getting-information-about-a-subscriber)
+  - [Listing Tags](#listing-tags)
+  - [Tagging a subscriber](#tagging-a-subscriber)
+  - [Removing a tag from a subscriber](#removing-a-tag-from-a-subscriber)
+  - [Contributions welcome!](#contributions-welcome)
 
-## Installation
+## The Convertkit CLI
 
-Install this this cli with `npm install convertkit-cli -g`
+The Convertkit CLI lets you do four things:
+
+1. Get information about a subscriber
+2. List tags
+3. Add a tag to a subscriber
+4. Remove a tag from a subscriber
+
+# Why use this?
+
+When I need to check a person's details on Convertkit, I need to log in to Convertkit and search for the person's email address. This process takes time, energy, and clicks.
+
+I'm not in the state to check a website when I'm doing work. I want to find the person's information quickly and get stuff done.
+
+This is why I created a command line interface for [Convertkit](https://convertkit.com?lmref=yfs9CA).
+
+## Installing the CLI
+
+You can install the CLI with `npm`:
 
 ```bash
-npm install convertkit-cli -g
+npm install convertkit-cli --g
 ```
 
-## Login
+This lets you use the `ck` command.
 
-You must provide your API secret for this CLI to work. The API secret is kept safe in your computer, so don't worry :)
+### Logging in
 
-You can find your API secret in the [Accounts Settings](https://app.convertkit.com/account/edit) page.
+You need to provide your API Secret for the Convertkit CLI to work. You can find the API Secret [on your accounts settings page].
+
+Your API Secret is kept safe in your computer, so don't worry about it leaking out :)
+
+You use the `login` command to provide the API Secret.
 
 ```bash
 ck login <API_SECRET>
 ```
 
-## Get subscriber
+## Getting information about a subscriber
 
-Gets information about a subscriber. Information includes:
-
-1. First name
-2. Email
-3. Custom fields
-4. Creation date
-5. Tags
+You can use the `subscriber` command to get information about a subscriber.
 
 ```bash
-ck subscriber <subscriberEmail>
+ck subscriber <email>
 ```
+
+This returns the following information:
+
+1. Name
+2. Email address
+3. State
+4. Date created
+5. Tags
 
 <figure role="figure">
-  <img src="images/subscriber.gif" alt="Gets a subscriber.">
+  <img src="/images/2020/ck-cli/subscriber.gif" alt="Gets a subscriber.">
 </figure>
 
-## Get Tags
+## Listing Tags
 
-Gets a list of available tags.
+You can use the `tags` command to list tags.
 
-```
+```bash
 ck tags
 ```
 
 <figure role="figure">
-  <img src="images/tags.gif" alt="Gets list of tags.">
+  <img src="/images/2020/ck-cli/tags.gif" alt="Gets list of tags.">
 </figure>
 
-## Add tag to a subscriber
+## Tagging a subscriber
 
-Adds a tag to a subscriber
+You can use the `tagsub` command to tag a subscriber. The `tagsub` command contains two subcommands.
+
+- `add`: Adds a tag to a subscriber
+- `remove`: Removes a tag from a subscriber
+
+To tag a subscriber, you use `tagsub add`.
 
 ```bash
-ck addtag <tag> <subscriberEmail>
+ck tagsub add <tag> <email>
 ```
 
 <figure role="figure">
-  <img src="images/addtag.gif" alt="Adds tag to subscriber">
+  <img src="/images/2020/ck-cli/tagsub-add.gif" alt="Adds tag to subscriber">
 </figure>
 
-## Remove tag from a subscriber
+## Removing a tag from a subscriber
 
-Removes a tag from a subscriber
+To remove a tag from a subscriber, you use `tagsub remove`.
 
 ```bash
-ck removetag <tag> <subscriberEmail>
+ck tagsub remove <tag> <email>
 ```
 
 <figure role="figure">
-  <img src="images/removetag.gif" alt="Removes tag from a subscriber">
+  <img src="/images/2020/ck-cli/tagsub-remove.gif" alt="Removes tag from a subscriber">
 </figure>
+
+## Contributions welcome!
+
+This CLI is in an early stage draft. It's not perfect yet. But I want to push this out so people (other than myself) can use it.

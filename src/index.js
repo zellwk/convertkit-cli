@@ -29,16 +29,17 @@ module.exports = async args => {
   }
 
   // Adds tag to subscriber
-  if (command === 'addtag') {
-    const [tag, email] = values
-    console.log(`Adding ${tag} to ${email}`)
-    return tagSubscriber(tag, email)
-  }
+  if (command === 'tagsub') {
+    const [subcommand, tag, email] = values
 
-  // Removes tag from subscriber
-  if (command === 'removetag') {
-    const [tag, email] = values
-    console.log(`Removing ${tag} from ${email}`)
-    return removeTagFromSubscriber(tag, email)
+    if (subcommand === 'add') {
+      console.log(`Adding ${tag} to ${email}`)
+      return tagSubscriber(tag, email)
+    }
+
+    if (subcommand === 'remove') {
+      console.log(`Removing ${tag} from ${email}`)
+      return removeTagFromSubscriber(tag, email)
+    }
   }
 }
