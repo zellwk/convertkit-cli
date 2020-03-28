@@ -1,27 +1,24 @@
 {
-  "name": "ck-cli",
+  "name": "convertkit-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "bin": {
     "ck": "bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zellwk/ck-cli.git"
+    "url": "git+https://github.com/zellwk/convertkit-cli.git"
   },
   "author": "Zell Liew <zellwk@gmail.com> (https://zellwk.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zellwk/ck-cli/issues"
+    "url": "https://github.com/zellwk/convertkit-cli/issues"
   },
-  "homepage": "https://github.com/zellwk/ck-cli#readme",
+  "homepage": "https://github.com/zellwk/convertkit-cli#readme",
   "dependencies": {
     "chalk": "^3.0.0",
+    "configstore": "^5.0.1",
     "minimist": "^1.2.5",
     "zl-fetch": "^3.2.2"
-  },
-  "devDependencies": {
-    "configstore": "^5.0.1"
   }
 }
