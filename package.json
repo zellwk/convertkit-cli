@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zellwk/ck-cli#readme",
   "dependencies": {
+    "chalk": "^3.0.0",
     "minimist": "^1.2.5",
     "zl-fetch": "^3.2.2"
   },
