@@ -71,7 +71,7 @@ This returns the following information:
 5. Tags
 
 <figure role="figure">
-  <img src="images/ck-cli/subscriber.gif" alt="Gets a subscriber.">
+  <img src="images/subscriber.gif" alt="Gets a subscriber.">
 </figure>
 
 ## Listing Tags
@@ -83,7 +83,7 @@ ck tags
 ```
 
 <figure role="figure">
-  <img src="images/ck-cli/tags.gif" alt="Gets list of tags.">
+  <img src="images/tags.gif" alt="Gets list of tags.">
 </figure>
 
 ## Tagging a subscriber
@@ -100,7 +100,7 @@ ck tagsub add <tag> <email>
 ```
 
 <figure role="figure">
-  <img src="images/ck-cli/tagsub-add.gif" alt="Adds tag to subscriber">
+  <img src="images/tagsub-add.gif" alt="Adds tag to subscriber">
 </figure>
 
 ## Removing a tag from a subscriber
@@ -112,7 +112,7 @@ ck tagsub remove <tag> <email>
 ```
 
 <figure role="figure">
-  <img src="images/ck-cli/tagsub-remove.gif" alt="Removes tag from a subscriber">
+  <img src="images/tagsub-remove.gif" alt="Removes tag from a subscriber">
 </figure>
 
 ## Contributions welcome!
