@@ -1,19 +1,16 @@
 const zlFetch = require('zl-fetch')
-const rootendpoint = 'https://api.convertkit.com/v3'
-const tagEndpoint = `${rootendpoint}/tags/`
-
-const Configstore = require('configstore')
-const config = new Configstore('ck-cli')
-const apiSecret = config.get('apiSecret')
+const endpoints = require('../endpoints')
 
 const getSubscriber = require('./subscriber')
+const config = require('../config')
+const apiSecret = config.get('apiSecret')
 
 /**
  * Gets all tags
  * @returns {Array}
  */
 async function getTags () {
-  const response = await zlFetch(tagEndpoint, {
+  const response = await zlFetch(endpoints.tags, {
     queries: { api_secret: apiSecret }
   })
 
@@ -41,7 +38,7 @@ async function getTag (searchedTag) {
  */
 async function tagSubscriber (userTag, email) {
   const tag = await getTag(userTag)
-  await zlFetch.post(`${tagEndpoint}/${tag.id}/subscribe`, {
+  await zlFetch.post(`${endpoints.tags}/${tag.id}/subscribe`, {
     queries: {
       api_secret: apiSecret,
       email
@@ -60,7 +57,7 @@ async function removeTagFromSubscriber (userTag, email) {
   const tag = await getTag(userTag)
   const subscriber = await getSubscriber(email)
 
-  await zlFetch.delete(`${rootendpoint}/subscribers/${subscriber.id}/tags/${tag.id}`, {
+  await zlFetch.delete(`${endpoints.subscribers}/${subscriber.id}/tags/${tag.id}`, {
     queries: {
       api_secret: apiSecret
     }

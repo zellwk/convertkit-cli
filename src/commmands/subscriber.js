@@ -1,14 +1,12 @@
 const zlFetch = require('zl-fetch')
-const rootendpoint = 'https://api.convertkit.com/v3'
+const endpoints = require('../endpoints')
 
 const Configstore = require('configstore')
 const config = new Configstore('ck-cli')
 const apiSecret = config.get('apiSecret')
 
 async function getSubscriber (email) {
-  const endpoint = `${rootendpoint}/subscribers`
-
-  const subscriberResponse = await zlFetch(`${endpoint}`, {
+  const subscriberResponse = await zlFetch(endpoints.subscribers, {
     queries: {
       api_secret: apiSecret,
       email_address: email
@@ -17,7 +15,7 @@ async function getSubscriber (email) {
   const subscriber = subscriberResponse.body.subscribers[0]
   if (!subscriber) throw new Error(`Cannot find subscriber "${email}"`)
 
-  const tagsResponse = await zlFetch(`${endpoint}/${subscriber.id}/tags`, {
+  const tagsResponse = await zlFetch(`${endpoints.subscribers}/${subscriber.id}/tags`, {
     queries: {
       api_secret: apiSecret
     }

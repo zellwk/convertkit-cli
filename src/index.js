@@ -1,5 +1,6 @@
 const minimist = require('minimist')
 
+const config = require('./config')
 const getSubscriber = require('./commmands/subscriber.js')
 const { getTags } = require('./commmands/tags.js')
 const { tagSubscriber, removeTagFromSubscriber } = require('./commmands/tags.js')
@@ -11,8 +12,6 @@ module.exports = async args => {
   // Stores login secrets for Convertkit
   if (command === 'login') {
     const [apiSecret] = values
-    const Configstore = require('configstore')
-    const config = new Configstore('ck-cli')
     config.set('apiSecret', apiSecret)
   }
 
