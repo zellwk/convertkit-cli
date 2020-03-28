@@ -2,6 +2,8 @@
 
 This is a unofficial CLI for [Convertkit](https://convertkit.com?lmref=yfs9CA).
 
+Note: Links to Convertkit in this repository are affiliate links.
+
 - [A Simple CLI for Convertkit](#a-simple-cli-for-convertkit)
   - [The Convertkit CLI](#the-convertkit-cli)
 - [Why use this?](#why-use-this)
@@ -69,7 +71,7 @@ This returns the following information:
 5. Tags
 
 <figure role="figure">
-  <img src="/images/2020/ck-cli/subscriber.gif" alt="Gets a subscriber.">
+  <img src="images/ck-cli/subscriber.gif" alt="Gets a subscriber.">
 </figure>
 
 ## Listing Tags
@@ -81,7 +83,7 @@ ck tags
 ```
 
 <figure role="figure">
-  <img src="/images/2020/ck-cli/tags.gif" alt="Gets list of tags.">
+  <img src="images/ck-cli/tags.gif" alt="Gets list of tags.">
 </figure>
 
 ## Tagging a subscriber
@@ -98,7 +100,7 @@ ck tagsub add <tag> <email>
 ```
 
 <figure role="figure">
-  <img src="/images/2020/ck-cli/tagsub-add.gif" alt="Adds tag to subscriber">
+  <img src="images/ck-cli/tagsub-add.gif" alt="Adds tag to subscriber">
 </figure>
 
 ## Removing a tag from a subscriber
@@ -110,7 +112,7 @@ ck tagsub remove <tag> <email>
 ```
 
 <figure role="figure">
-  <img src="/images/2020/ck-cli/tagsub-remove.gif" alt="Removes tag from a subscriber">
+  <img src="images/ck-cli/tagsub-remove.gif" alt="Removes tag from a subscriber">
 </figure>
 
 ## Contributions welcome!
