@@ -1,7 +1,10 @@
 {
   "name": "convertkit-cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
+  "scripts": {
+    "release": "np"
+  },
   "bin": {
     "ck": "bin/index.js"
   },
@@ -24,5 +27,8 @@
     "configstore": "^5.0.1",
     "minimist": "^1.2.5",
     "zl-fetch": "^3.2.2"
+  },
+  "devDependencies": {
+    "np": "^6.2.0"
   }
 }
